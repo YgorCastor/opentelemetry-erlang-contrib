@@ -114,6 +114,7 @@ defmodule OpentelemetryPhoenix do
       "http.scheme": "#{conn.scheme}",
       "http.target": conn.request_path,
       "http.user_agent": user_agent,
+      "http.request_headers": conn.req_headers,
       "net.host.ip": to_string(:inet_parse.ntoa(conn.remote_ip)),
       "net.host.port": conn.port,
       "net.peer.ip": to_string(:inet_parse.ntoa(peer_ip)),
